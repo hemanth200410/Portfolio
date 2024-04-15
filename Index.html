@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>validation</title>
+    
+</head>
+<body>
+    <a url="sucess.html"></a>
+    <form name="myform" method="post" onsubmit="return validpassword()"action="/sucess.html" > 
+    <label>Password:</label>
+    <input type="Password" name="pass1" required><br><br>
+    <label>CPassword:</label>
+    <input type="Password" name="pass2"><br><br>
+    <button>click</button>
+
+    </form>
+    <script>
+        function validpassword(){
+            var password=document.myform.pass1.value;
+            var cpassword=document.myform.pass2.value;
+            if(password.length<6){
+                alert("passwod must contain 6 letters")
+                return flase;
+            }
+            if(password==cpassword){
+            return true;
+            }
+            else{
+                alert("pawword incorrect")
+            }
+
+
+            
+        }
+    </script>
+</body>
